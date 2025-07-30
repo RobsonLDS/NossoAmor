@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosso Amor</title>
     
@@ -13,8 +13,35 @@
     <link rel="stylesheet" href="estilo.css">
 
 </head>
+
+<div id="coracoes-container"></div>
+
 <body>
 
+	<audio id="musicaFundo" autoplay loop hidden>
+		<source src="https://drive.google.com/uc?export=download&id=1Td0DeLYftEp8mLTno_ucrmsDsVZFq7cx" type="audio/mpeg">
+	</audio>
+
+	<!-- Cabeçalho musical -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75 fixed-top px-3">
+		<div class="container-fluid d-flex justify-content-between align-items-center">
+			<span class="navbar-brand mb-0 h1">🎶 Trilha Sonora do Amor</span>
+
+			<div class="d-flex align-items-center gap-2">
+				
+				<!-- Link para o vídeo no YouTube -->
+				<a href="https://www.youtube.com/watch?v=CLeZyIID9Bo" target="_blank" class="btn btn-outline-danger btn-sm ms-2">
+					Chill Lofi Mix
+				</a>
+				
+				<button class="btn btn-outline-light btn-sm" onclick="tocarMusica()">▶️</button>
+				<button class="btn btn-outline-light btn-sm" onclick="pararMusica()">⏸️</button>
+
+				<input type="range" id="controle-volume" class="form-range ms-2" min="0" max="1" step="0.01" value="0.2" style="width: 150px;">
+
+			</div>
+		</div>
+	</nav>
 
 	<div class="container">
 	
@@ -43,7 +70,30 @@
 		
 		</div>
 	</div>
-    
+
+	<!--
+	<audio id="musicaFundo" autoplay loop hidden>
+		<source src="musica.mp3" type="audio/mpeg">
+	</audio>
+
+	<button class="btn btn-primary mt-3" onclick="document.getElementById('musicaFundo').play()">
+		▶️
+	</button>
+	<button class="btn btn-primary mt-3" onclick="document.getElementById('musicaFundo').pause()">
+		⏹️
+	</button>
+	<div class="mt-3">
+		<label for="controle-volume" class="form-label contorno-preto">🔊 Volume da música:</label>
+		<input type="range" id="controle-volume" class="form-range" min="0" max="1" step="0.01" value="0.2">
+	</div>
+    -->
+
+	<!-- Rodapé do site -->
+	<footer class="navbar navbar-dark bg-dark bg-opacity-75 fixed-bottom px-3">
+		<div class="container-fluid d-flex justify-content-center align-items-center">
+			<a href="memorias.html" class="nav-link text-light">📸 Memórias</a>
+		</div>
+	</footer>
 
     <!-- jQuery (versão compatível com Bootstrap 5) -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
