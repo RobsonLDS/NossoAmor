@@ -14,10 +14,12 @@
 
 </head>
 
-<div id="coracoes-container"></div>
-
 <body>
+		
+	<!-- CHUVA DE CORAÇÔES -->
+	<div id="coracoes-container"></div>
 
+	<!-- LINK DA MUSICA -->
 	<audio id="musicaFundo" autoplay loop hidden>
 		<source src="https://drive.google.com/uc?export=download&id=1Td0DeLYftEp8mLTno_ucrmsDsVZFq7cx" type="audio/mpeg">
 	</audio>
@@ -25,7 +27,9 @@
 	<!-- Cabeçalho musical -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75 fixed-top px-3">
 		<div class="container-fluid d-flex justify-content-between align-items-center">
-			<span class="navbar-brand mb-0 h1">🎶 Trilha Sonora do Amor</span>
+			
+			<a href="memorias.html" class="navbar-brand text-light">📸 Memórias</a>
+			<!--<span class="navbar-brand mb-0 h1">🎶 Trilha Sonora do Amor</span>-->
 
 			<div class="d-flex align-items-center gap-2">
 				
@@ -43,57 +47,60 @@
 		</div>
 	</nav>
 
-	<div class="container">
-	
-		<div class="text">
-			<h1 class="text-center contorno-preto">💖 Clímax e Asbolfo 💖</h1>
-			
-			<hr class="my-4 text-white">
-			
-			<p class="lead contorno-preto">
-				Este site marca o início da nossa jornada juntos. 💖
-			</p>	
-			<p class="lead contorno-preto">	
-				Cada dia ao seu lado é único, e quero guardar todos eles na memória e no coração.
-			</p>	
-			<p class="lead contorno-preto">	
-				Que esta contagem seja um lembrete do quanto você é especial para mim, e de tudo o que ainda vamos viver lado a lado. 🌟
-			</p>
-			
-			<hr class="my-4 text-white">
-			
-			<p class="text-center lead contorno-preto">
-				⏰ Início de tudo: <span id="data-inicio">26/07/2025</span><br>
-				☀️ Dia atual: <span id="data-atual"></span><br>
-				💖 Nosso tempo juntos: <span id="tempo-juntos"></span> 
-			</p>
-		
+	<!-- Principal -->
+	<div class="principal-container">
+
+		<!-- IMAGENS DOS DOIS -->
+		<div class="imagens-container">
+			<div class="imagem-capa">
+				<img src="img-climax.png" alt="Climax">
+				<div class="legenda">Clímax</div>
+			</div>
+			<div class="imagem-capa">
+				<img src="img-asbolfo.png" alt="Asbolfo">
+				<div class="legenda">Asbolfo</div>
+			</div>
 		</div>
-	</div>
-
-	<!--
-	<audio id="musicaFundo" autoplay loop hidden>
-		<source src="musica.mp3" type="audio/mpeg">
-	</audio>
-
-	<button class="btn btn-primary mt-3" onclick="document.getElementById('musicaFundo').play()">
-		▶️
-	</button>
-	<button class="btn btn-primary mt-3" onclick="document.getElementById('musicaFundo').pause()">
-		⏹️
-	</button>
-	<div class="mt-3">
-		<label for="controle-volume" class="form-label contorno-preto">🔊 Volume da música:</label>
-		<input type="range" id="controle-volume" class="form-range" min="0" max="1" step="0.01" value="0.2">
-	</div>
-    -->
+		
+		<!-- TEXTO DA PAGINA -->
+		<div class="text-container">
+			<div class="text">
+				<h1 class="text-center contorno-preto">💖 Clímax e Asbolfo 💖</h1>
+				
+				<hr class="my-4 text-white">
+				
+				<p class="lead contorno-preto">
+					Este site marca o início da nossa jornada juntos. 💖
+				</p>	
+				<p class="lead contorno-preto">	
+					Cada dia ao seu lado é único, e quero guardar todos eles na memória e no coração.
+				</p>	
+				<p class="lead contorno-preto">	
+					Que esta contagem seja um lembrete do quanto você é especial para mim, e de tudo o que ainda vamos viver lado a lado. 🌟
+				</p>
+				
+				<hr class="my-4 text-white">
+				
+				<p class="text-center lead contorno-preto">
+					⏰ Início de tudo: <span id="data-inicio">26/07/2025</span><br>
+					☀️ Dia atual: <span id="data-atual"></span><br>
+					💖 Nosso tempo juntos: <span id="tempo-juntos"></span> 
+				</p>
+			
+			</div>
+		</div>
+	</div>	
 
 	<!-- Rodapé do site -->
+	<!--
 	<footer class="navbar navbar-dark bg-dark bg-opacity-75 fixed-bottom px-3">
-		<div class="container-fluid d-flex justify-content-center align-items-center">
-			<a href="memorias.html" class="nav-link text-light">📸 Memórias</a>
+		<div class="container-fluid">
+			<div class="d-flex justify-content-start w-100">
+				<a href="memorias.html" class="nav-link text-light">📸 Memórias</a>
+			</div>
 		</div>
 	</footer>
+	-->
 
     <!-- jQuery (versão compatível com Bootstrap 5) -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

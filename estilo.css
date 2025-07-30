@@ -6,24 +6,34 @@
 }
 
 body {
-	padding-top: 70px;  /* espaço para o cabeçalho */
-    padding-bottom: 60px; /* espaço para o rodapé */
 	width: 100%;
-	min-height: 100vh;
+	min-height: vh;
     background-image: url(image.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	/* Remover flex */
+	display: block;
 }
 
 #controle-volume {
     accent-color: #ffc0cb;
 }
 
-.container{
+.principal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* conteúdo cresce de cima para baixo */
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+
+    /* Parte crucial: ocupa o espaço entre header e footer */
+    flex: 1 0 auto;
+}
+
+.text-container{
 	width: 100%;
 	max-width: 600px;
 	background-color: transparent;
@@ -132,3 +142,51 @@ input[type="text"] {
     }
 }
 
+/* IMAGENS CONFIG */
+
+.imagens-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* espaço entre as imagens */
+    margin-top: 30px; /* espaço abaixo da navbar */
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* para responsividade em telas pequenas */
+    z-index: 1;
+    position: relative;
+}
+
+.imagem-capa img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* transforma em círculo */
+    border: 4px solid white;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.imagem-capa img:hover {
+    transform: scale(1.1); /* zoom ao passar o mouse */
+}
+
+.legenda {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 0;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.imagem-capa:hover .legenda {
+    opacity: 1;
+}
