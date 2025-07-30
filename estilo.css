@@ -12,8 +12,9 @@ body {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	/* Remover flex */
+    background-attachment: fixed; /* para efeito fixo bonito */
 	display: block;
+    flex-direction: column;
 }
 
 #controle-volume {
@@ -55,6 +56,10 @@ body {
 span {
     color: #ffffff;
     font-weight: bold;
+}
+
+footer {
+	flex-shrink: 0;
 }
 
 .contorno-preto {
