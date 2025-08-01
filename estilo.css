@@ -27,7 +27,8 @@ body {
     align-items: center;
     justify-content: flex-start; /* conteúdo cresce de cima para baixo */
     width: 100%;
-    padding: 0 15px;
+    margin-top: 40px; /* Altura do navbar */
+    padding: 20px;
     box-sizing: border-box;
 
     /* Parte crucial: ocupa o espaço entre header e footer */
@@ -154,8 +155,8 @@ input[type="text"] {
     justify-content: center;
     align-items: center;
     gap: 30px; /* espaço entre as imagens */
-    margin-top: 30px; /* espaço abaixo da navbar */
-    margin-bottom: 30px;
+    margin-top: 10px; /* espaço abaixo da navbar */
+    margin-bottom: 10px;
     flex-wrap: wrap; /* para responsividade em telas pequenas */
     z-index: 1;
     position: relative;
