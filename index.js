@@ -29,10 +29,10 @@ $(document).ready(function () {
         const segundos = Math.floor((diffMs % (1000 * 60)) / 1000);
 
         const texto = `${dias} dias, ${horas}h:${minutos}m:${segundos}s`;
-        $('#tempo-juntos').text(texto);
+        //$('#tempo-juntos').text(texto);
 
         const dataFormatada = agora.toLocaleDateString('pt-BR');
-        $('#data-atual').text(dataFormatada);
+        //$('#data-atual').text(dataFormatada);
     }
 
     // Atualiza imediatamente e depois a cada segundo
